@@ -153,3 +153,6 @@ ro.vendor.qti.sensors.facing=false
 
 # Shutdown waitime
 sys.vendor.shutdown.waittime=500
+
+# Updater properties
+ persist.vendor.recovery_update=false
