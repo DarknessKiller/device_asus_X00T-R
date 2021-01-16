@@ -65,16 +65,16 @@ function blob_fixup() {
     case "${1}" in
     
     product/lib64/libdpmframework.so)
-        "${PATCHELF}" --add-needed libdpmframework_shim.so "${2}"
+        patchelf --add-needed libdpmframework_shim.so "${2}"
         ;;
 
     # Load vndk 29 libprotobuf
     vendor/lib64/libwvhidl.so | vendor/lib64/libvendor.goodix.hardware.fingerprint@1.0-service.so)
-        "${PATCHELF}" --replace-needed "libprotobuf-cpp-lite.so" "libprotobuf-cpp-lite-v29.so" "${2}"
+        patchelf --replace-needed "libprotobuf-cpp-lite.so" "libprotobuf-cpp-lite-v29.so" "${2}"
         ;;
 
     vendor/lib64/libril-qc-hal-qmi.so | vendor/lib64/libsettings.so)
-        "${PATCHELF}" --replace-needed "libprotobuf-cpp-full.so" "libprotobuf-cpp-full-v29.so" "${2}"
+        patchelf --replace-needed "libprotobuf-cpp-full.so" "libprotobuf-cpp-full-v29.so" "${2}"
         ;;
 
     esac
