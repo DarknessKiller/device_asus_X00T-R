@@ -25,3 +25,6 @@ allow hal_camera_default sysfs:file { getattr };
 allow hal_camera_default init:binder { call };
 allow hal_camera_default socket_device:sock_file { write };
 allow hal_camera_default init:unix_stream_socket { connectto };
+allow hal_camera_default sensors_dbg_prop:file { read };
+allow hal_camera_default diag_device:chr_file { read write };
+allow hal_camera_default sysfs_sensors:dir { read };

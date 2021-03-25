@@ -9,3 +9,4 @@ allow hal_fingerprint_default init:unix_stream_socket { connectto };
 allow hal_fingerprint_default vendor_default_prop:property_service { set };
 allow hal_fingerprint_default fingerprintd_data_file:dir { write };
 allow hal_fingerprint_default init:binder { call };
+allow hal_fingerprint_default tee_device:chr_file { read write };

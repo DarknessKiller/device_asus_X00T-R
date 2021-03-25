@@ -117,3 +117,7 @@ allow init self:udp_socket { setopt };
 allow init self:udp_socket { bind };
 allow init node:udp_socket { node_bind };
 allow init self:udp_socket { getattr };
+allow init system_file:dir { relabelfrom };
+allow init system_file:file { relabelfrom };
+allow init system_file:lnk_file { relabelfrom };
+allow init mdnsd_exec:file { relabelfrom };
