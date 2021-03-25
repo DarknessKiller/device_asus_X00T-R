@@ -1,0 +1,15 @@
+allow hal_sensors_default sysfs:dir { read };
+allow hal_sensors_default sysfs:dir { open };
+allow hal_sensors_default sysfs:file { read };
+allow hal_sensors_default sysfs:file { open };
+allow hal_sensors_default mnt_vendor_file:dir { getattr };
+allow hal_sensors_default mnt_vendor_file:file { read };
+allow hal_sensors_default mnt_vendor_file:file { open };
+allow hal_sensors_default device:chr_file { read write };
+allow hal_sensors_default device:chr_file { open };
+allow hal_sensors_default device:chr_file { ioctl };
+allow hal_sensors_default self:socket { create };
+allow hal_sensors_default self:socket { ioctl };
+allow hal_sensors_default self:socket { read };
+allow hal_sensors_default self:socket { write };
+allow hal_sensors_default sysfs:file { read write };

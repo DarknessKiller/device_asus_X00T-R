@@ -1,0 +1,2 @@
+allow hwservicemanager init:binder { transfer };
+allow hwservicemanager init:binder { call };

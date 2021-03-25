@@ -1,0 +1,7 @@
+allow hal_wifi_default socket_device:dir { write };
+allow hal_wifi_default socket_device:dir { add_name };
+allow hal_wifi_default socket_device:sock_file { create };
+allow hal_wifi_default socket_device:sock_file { setattr };
+allow hal_wifi_default socket_device:sock_file { write };
+allow hal_wifi_default vendor_default_prop:property_service { set };
+allow hal_wifi_default init:unix_dgram_socket { sendto };

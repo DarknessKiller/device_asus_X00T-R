@@ -1,0 +1,3 @@
+allow mediacodec init:binder { call };
+allow mediacodec sysfs:file { read };
+allow mediacodec sysfs:file { open };

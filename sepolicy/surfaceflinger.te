@@ -1,0 +1,8 @@
+allow surfaceflinger vendor_file:file { read };
+allow surfaceflinger vendor_file:file { open };
+allow surfaceflinger vendor_file:file { getattr };
+allow surfaceflinger vendor_file:file { execute };
+allow surfaceflinger device:chr_file { read write };
+allow surfaceflinger device:chr_file { open };
+allow surfaceflinger device:chr_file { ioctl };
+allow surfaceflinger hal_camera_default:binder { transfer };

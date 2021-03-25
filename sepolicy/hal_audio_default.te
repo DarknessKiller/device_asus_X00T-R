@@ -1,0 +1,12 @@
+allow hal_audio_default sysfs:file { read };
+allow hal_audio_default sysfs:file { open };
+allow hal_audio_default sysfs:file { getattr };
+allow hal_audio_default property_socket:sock_file { write };
+allow hal_audio_default init:unix_stream_socket { connectto };
+allow hal_audio_default default_prop:property_service { set };
+allow hal_audio_default vendor_data_file:file { read append };
+allow hal_audio_default vendor_data_file:file { open };
+allow hal_audio_default vendor_data_file:file { getattr };
+allow hal_audio_default device:chr_file { read write };
+allow hal_audio_default device:chr_file { open };
+allow hal_audio_default device:chr_file { ioctl };

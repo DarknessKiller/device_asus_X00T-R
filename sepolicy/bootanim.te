@@ -1,0 +1,9 @@
+allow bootanim userspace_reboot_exported_prop:file { read };
+allow bootanim userspace_reboot_exported_prop:file { open };
+allow bootanim userspace_reboot_exported_prop:file { getattr };
+allow bootanim vendor_file:file { read };
+allow bootanim device:chr_file { read write };
+allow bootanim sysfs:file { read };
+allow bootanim sysfs:file { open };
+allow bootanim sysfs:file { getattr };
+allow bootanim device:chr_file { ioctl };
